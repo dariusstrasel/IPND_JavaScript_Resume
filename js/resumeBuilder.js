@@ -1,108 +1,93 @@
 var work = {
     //This JSON object contains all records of my current/previous positions.
-    "jobs": [
-        {
-            "employer": "Preventure",
-            "title": "Jr. Software Developer",
-            "location": "Coventry, RI",
-            "dates": "August 2016 – Present",
-            "description": ""
-        },
-        {
-            "employer": "Preventure",
-            "title": "Data Analyst",
-            "location": "Coventry, RI",
-            "dates": "July 2015 –Present",
-            "description":
-                "<br>—	Collaborated with Data Operations team thru agile project management techniques via daily stand-ups, weekly huddles, and sprint retrospectives organized via Salesforce.com and Atlassian JIRA software." +
-                "<br>—	Increased reporting accuracy and data health by conducting peer code/report reviews for all SQL, SSRS, and Excel sourced projects" +
-                "<br>—	Reduced analytics turn-around by implementing automated Excel, Powerpoint, and Access reports thru the use of VBA and SQL stored procedures through our on premise data-warehouse." +
-                "<br>—	Lead and supported technology infrastructure solution projects in coordination with development, operations, and vendors such as Atrion, Ricoh, Carousel, InContact, WCS, and Cerner" +
-                "<br>—	Managed and reconciled client data contact data sets into Salesforce CRM database and SQL Server" +
-                "<br>—	Administrated user accounts and access policies for Salesforce.com, Google Apps Admin, Windows Active Directory, and Amazon Web Services"
-        },
-        {
-            "employer": "Darius’ Depictions (Self)",
-            "title": "Founder, Web Developer, Media Designer, Photographer",
-            "location": "Providence, RI",
-            "dates": "January 2014 – Present",
-            "description":
-                "<br>—	Managed startup business functions including; finance, social media, client relations and project management" +
-                "<br>—	Photographed/post-processed portraits, events and fine art products via Adobe Creative Suite for clients" +
-                "<br>—	Designed graphic concepts and ad media for hybrid website and social media marketing"
-        },
-        {
-            "employer": "Providence Equity Partners",
-            "title": "Desktop Support Technician",
-            "location": "Providence, RI",
-            "dates": "January 2015 – July 2015",
-            "description":
-                "<br>—	Analyzed and designed hardware/software usage data of company-wide computers via SCCM for IT system administration reporting allowing insightful and strategic decisions" +
-                "<br>—	Resolved/troubleshooted a combination of over 30 Windows 7 desktop/laptop computers, LAN/WAN settings, printers/copiers, iOS phones/tablets, monitors, speakers and peripherals related issues via ticketing system resulting in proper incident management and excellent customer service" +
-                "<br>—	Configured technical buildouts of Windows 7 desktop/laptops including software QA and hardware upgrades such as RAM, GPU, SSD according to exact design specification and follow-up"
-        }
-    ]
+    "jobs": [{
+        "employer": "Preventure",
+        "title": "Jr. Software Developer",
+        "location": "Coventry, RI",
+        "dates": "August 2016 – Present",
+        "description": ""
+    }, {
+        "employer": "Preventure",
+        "title": "Data Analyst",
+        "location": "Coventry, RI",
+        "dates": "July 2015 –Present",
+        "description": "<br>—	Collaborated with Data Operations team thru agile project management techniques via daily stand-ups, weekly huddles, and sprint retrospectives organized via Salesforce.com and Atlassian JIRA software." +
+            "<br>—	Increased reporting accuracy and data health by conducting peer code/report reviews for all SQL, SSRS, and Excel sourced projects" +
+            "<br>—	Reduced analytics turn-around by implementing automated Excel, Powerpoint, and Access reports thru the use of VBA and SQL stored procedures through our on premise data-warehouse." +
+            "<br>—	Lead and supported technology infrastructure solution projects in coordination with development, operations, and vendors such as Atrion, Ricoh, Carousel, InContact, WCS, and Cerner" +
+            "<br>—	Managed and reconciled client data contact data sets into Salesforce CRM database and SQL Server" +
+            "<br>—	Administrated user accounts and access policies for Salesforce.com, Google Apps Admin, Windows Active Directory, and Amazon Web Services"
+    }, {
+        "employer": "Darius’ Depictions (Self)",
+        "title": "Founder, Web Developer, Media Designer, Photographer",
+        "location": "Providence, RI",
+        "dates": "January 2014 – Present",
+        "description": "<br>—	Managed startup business functions including; finance, social media, client relations and project management" +
+            "<br>—	Photographed/post-processed portraits, events and fine art products via Adobe Creative Suite for clients" +
+            "<br>—	Designed graphic concepts and ad media for hybrid website and social media marketing"
+    }, {
+        "employer": "Providence Equity Partners",
+        "title": "Desktop Support Technician",
+        "location": "Providence, RI",
+        "dates": "January 2015 – July 2015",
+        "description": "<br>—	Analyzed and designed hardware/software usage data of company-wide computers via SCCM for IT system administration reporting allowing insightful and strategic decisions" +
+            "<br>—	Resolved/troubleshooted a combination of over 30 Windows 7 desktop/laptop computers, LAN/WAN settings, printers/copiers, iOS phones/tablets, monitors, speakers and peripherals related issues via ticketing system resulting in proper incident management and excellent customer service" +
+            "<br>—	Configured technical buildouts of Windows 7 desktop/laptops including software QA and hardware upgrades such as RAM, GPU, SSD according to exact design specification and follow-up"
+    }]
 };
 
 var projects = {
     //This JSON object contains data for programming projects I've worked on recently.
-    "projects": [
-        {
-            "title": "IPND Final Project: Object Orientated JavaScript Resume",
-            "dates": "2016-2016",
-            "description": "This project utilizes custom JavaScript object methods to generate a HTML/CSS design using" +
+    "projects": [{
+        "title": "IPND Final Project: Object Orientated JavaScript Resume",
+        "dates": "2016-2016",
+        "description": "This project utilizes custom JavaScript object methods to generate a HTML/CSS design using" +
             "which is sourced via schemed JSON objects.",
-            "URL": "https://github.com/dariusstrasel/IPND_JavaScript_Resume",
-            "images": [
-                "images/project.jpg"
-            ]
-        },
-        {
-            "title": "IPND Movie Website Python",
-            "dates": "2016-2016",
-            "description": "This Python program will generate a movie trailer website using first-order class objects.",
-            "URL": "https://github.com/dariusstrasel/IPND_Movie_Website_Python",
-            "images": [
-                "images/project.jpg"
-            ]
-        },
-        {
-            "title": "IPND ProfanityChecker Python",
-            "dates": "2016-2016",
-            "description": "This program will check if a text file contains swear words by querying over REST API.",
-            "URL": "https://github.com/dariusstrasel/IPND_ProfanityChecker_Python",
-            "images": [
-                "images/project.jpg"
-            ]
-        },
-        {
-            "title": "IPND TwilioRestClient Python",
-            "dates": "2016-2016",
-            "description": "This program will POST API requests over Twilio's API to send SMS messages to phones.",
-            "URL": "https://github.com/dariusstrasel/IPND_TwilioRestClient_Python",
-            "images": [
-                "images/project.jpg"
-            ]
-        },
-        {
-            "title": "IPND 2nd Project: Quiz Game",
-            "dates": "2016-2016",
-            "description": "This Python program will present a mad-lib style quiz ",
-            "URL": "https://github.com/dariusstrasel/IPND_2ndProject",
-            "images": [
-                "images/project.jpg"
-            ]
-        },
-        {
-            "title": "IPND First Project: HTML/CSS Website",
-            "dates": "2016-2016",
-            "description": "This is a ficticious HTML/CSS website; it uses vanilla HTML/CSS without JavaScript.",
-            "URL": "https://github.com/dariusstrasel/IPND_2ndProject",
-            "images": [
-                "images/project.jpg"
-            ]
-        }
-    ]
+        "URL": "https://github.com/dariusstrasel/IPND_JavaScript_Resume",
+        "images": [
+            "images/project.jpg"
+        ]
+    }, {
+        "title": "IPND Movie Website Python",
+        "dates": "2016-2016",
+        "description": "This Python program will generate a movie trailer website using first-order class objects.",
+        "URL": "https://github.com/dariusstrasel/IPND_Movie_Website_Python",
+        "images": [
+            "images/project.jpg"
+        ]
+    }, {
+        "title": "IPND ProfanityChecker Python",
+        "dates": "2016-2016",
+        "description": "This program will check if a text file contains swear words by querying over REST API.",
+        "URL": "https://github.com/dariusstrasel/IPND_ProfanityChecker_Python",
+        "images": [
+            "images/project.jpg"
+        ]
+    }, {
+        "title": "IPND TwilioRestClient Python",
+        "dates": "2016-2016",
+        "description": "This program will POST API requests over Twilio's API to send SMS messages to phones.",
+        "URL": "https://github.com/dariusstrasel/IPND_TwilioRestClient_Python",
+        "images": [
+            "images/project.jpg"
+        ]
+    }, {
+        "title": "IPND 2nd Project: Quiz Game",
+        "dates": "2016-2016",
+        "description": "This Python program will present a mad-lib style quiz ",
+        "URL": "https://github.com/dariusstrasel/IPND_2ndProject",
+        "images": [
+            "images/project.jpg"
+        ]
+    }, {
+        "title": "IPND First Project: HTML/CSS Website",
+        "dates": "2016-2016",
+        "description": "This is a ficticious HTML/CSS website; it uses vanilla HTML/CSS without JavaScript.",
+        "URL": "https://github.com/dariusstrasel/IPND_2ndProject",
+        "images": [
+            "images/project.jpg"
+        ]
+    }]
 };
 
 var bio = {
@@ -125,35 +110,30 @@ var bio = {
 
 var education = {
     //This JSON object contains data for my educational background.
-    "schools": [
-        {
-            "name": "Year Up / Community College of Rhode Island",
-            "location": "Providence, RI",
-            "degree": "A.A.S.",
-            "majors": "Computer Science",
-            "dates": "September 2014 – Present",
-            "url": "http://www.yearup.org/"
-        }
-    ],
-    "onlineCourse": [
-        {
-            "title": "Introduction to Programming",
-            "school": "Udacity",
-            "dates": "July 2016 – September 2016",
-            "url": "https://www.udacity.com/course/intro-to-programming-nanodegree--nd000"
-        },
-        {
-            "title": "Front-End Development",
-            "school": "Udacity",
-            "dates": "September 2016 – Present",
-            "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
-        }
-    ]
+    "schools": [{
+        "name": "Year Up / Community College of Rhode Island",
+        "location": "Providence, RI",
+        "degree": "A.A.S.",
+        "majors": "Computer Science",
+        "dates": "September 2014 – Present",
+        "url": "http://www.yearup.org/"
+    }],
+    "onlineCourse": [{
+        "title": "Introduction to Programming",
+        "school": "Udacity",
+        "dates": "July 2016 – September 2016",
+        "url": "https://www.udacity.com/course/intro-to-programming-nanodegree--nd000"
+    }, {
+        "title": "Front-End Development",
+        "school": "Udacity",
+        "dates": "September 2016 – Present",
+        "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+    }]
 };
 
 bio.display_skills = function() {
     //This method will append the contents of the bio.skills array to the #header div.
-    if(bio.skills.length > 0 ) {
+    if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
         for (var skill = 0; skill < bio.skills.length; skill++) {
             //for (var skill in bio.skills) {
@@ -186,7 +166,7 @@ bio.display_top_contact = function() {
         formattedContact = formattedContact.replace("%data%", bio.contacts[index]);
         //console.log("157: " + formattedContact);
         $("#topContacts").append(formattedContact);
-        }
+    }
 };
 
 bio.display_pictureMessage = function() {
@@ -202,9 +182,9 @@ bio.display_footer_contact = function() {
     //method hasOwnProperty(index) is called on bio.contacts to parse the key value pairs of the
     //object. This is very similar to bio.display_top_contact, but appends to #footerContacts div.
     for (var index in bio.contacts) {
-if (!bio.contacts.hasOwnProperty(index)) {
-    continue;
-}
+        if (!bio.contacts.hasOwnProperty(index)) {
+            continue;
+        }
         console.log("171: " + bio.contacts[index]);
         var formattedContact = HTMLcontactGeneric.replace("%contact%", [index]);
         formattedContact = formattedContact.replace("%data%", bio.contacts[index]);
@@ -232,7 +212,7 @@ projects.display = function() {
 work.display = function() {
     //This method will append the contents of the work object to the #workExperience div
     for (var job = 0; job < work.jobs.length; job++) {
-    //for (var job in work.jobs) {
+        //for (var job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
         var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
@@ -250,7 +230,7 @@ education.display_school = function() {
     // $("#education").append(HTMLschoolStart) for online schools as well. (Held in same object;
     //different property.)
     for (var school = 0; school < education.schools.length; school++) {
-    //for (var school in education.schools) {
+        //for (var school in education.schools) {
         $("#education").append(HTMLschoolStart);
         var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
         var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
@@ -261,31 +241,31 @@ education.display_school = function() {
         var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
         $(".education-entry:last").append(formattedMajor);
     }
-        $("#education").append(HTMLonlineClasses);
-        for (var onlineSchool = 0; onlineSchool < education.onlineCourse.length; onlineSchool++) {
+    $("#education").append(HTMLonlineClasses);
+    for (var onlineSchool = 0; onlineSchool < education.onlineCourse.length; onlineSchool++) {
         //for (school in education.onlineCourse) {
-            $("#education").append(HTMLschoolStart);
-            var formattedSchoolName = HTMLonlineTitle.replace("%data%", education.onlineCourse[onlineSchool].title);
-            formattedSchoolName = formattedSchoolName.replace("%url%", education.onlineCourse[onlineSchool].url);
-            var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourse[onlineSchool].school);
-            $(".education-entry:last").append(formattedSchoolName + formattedSchool);
-            var formattedSchoolDates = HTMLonlineDates.replace("%data%", education.onlineCourse[onlineSchool].dates);
-            $(".education-entry:last").append(formattedSchoolDates);
+        $("#education").append(HTMLschoolStart);
+        var formattedSchoolName = HTMLonlineTitle.replace("%data%", education.onlineCourse[onlineSchool].title);
+        formattedSchoolName = formattedSchoolName.replace("%url%", education.onlineCourse[onlineSchool].url);
+        var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourse[onlineSchool].school);
+        $(".education-entry:last").append(formattedSchoolName + formattedSchool);
+        var formattedSchoolDates = HTMLonlineDates.replace("%data%", education.onlineCourse[onlineSchool].dates);
+        $(".education-entry:last").append(formattedSchoolDates);
 
     }
 };
 
 function startClickLogging() {
     //This function tracks any time a user right clicks while the resume is focused.
-        $(document).click(function(loc) {
+    $(document).click(function(loc) {
         var x = loc.pageX;
         var y = loc.pageY;
-        logClicks(x,y);
+        logClicks(x, y);
     });
     //This will log the click to the console
     $(document).click(function(loc) {
-    console.log(loc.pageX, loc.pageY);
-});
+        console.log(loc.pageX, loc.pageY);
+    });
 }
 
 function appendGoogleMap() {
