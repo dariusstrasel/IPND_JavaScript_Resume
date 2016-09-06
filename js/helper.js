@@ -12,7 +12,7 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1><a id="name" class="navbar-brand" href="#">%data%</a></h1>';
+var HTMLheaderName = '<h1><a id="name" class="orange navbar-brand" href="#">%data%</a></h1>';
 var HTMLheaderRole = '<span id="name"></span><hr>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
@@ -37,10 +37,10 @@ var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<div class = "caption"><a href="#">%data%</a></div>';
+var HTMLprojectTitle = '<a href=%url%>%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<div class = "caption"><br><p>%data%</p></div>';
-var HTMLprojectImage = '<div class = "thumbnail"><img src="%data%"></div>';
+var HTMLprojectDescription = '<br><p>%data%</p>';
+var HTMLprojectImage = '<img class = "thumbnail" src="%data%">';
 var HTMLprojectURL = '<a href =%data% class = "btn btn-default" role = "button">Github</a>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
@@ -51,9 +51,9 @@ var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
+var HTMLonlineTitle = '<br><a href=%url%>%data%';
 var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
+var HTMLonlineDates = '<div class="date-text">%data%</div><br>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 var googleMap = '<div id="map"></div>';

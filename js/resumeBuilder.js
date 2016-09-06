@@ -217,17 +217,15 @@ projects.display = function() {
     //included, into my resume.
     for (var project = 0; project < projects.projects.length; project++) {
         $("#projects").append(HTMLprojectStart);
-        var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
-        $(".project-entry:last").append(formattedProjectImage);
         var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        formattedProjectTitle = formattedProjectTitle.replace("%url", projects.projects[project].URL);
         $(".project-entry:last").append(formattedProjectTitle);
         var formattedProjectDate = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
         $(".project-entry:last").append(formattedProjectDate);
         var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
         $(".project-entry:last").append(formattedProjectDescription);
-        HTMLprojectURL = HTMLprojectURL.replace("%data%", projects.projects[project].URL);
-        $(".project-entry:last").append(HTMLprojectURL);
-
+        var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
+        $(".project-entry:last").append(formattedProjectImage);
     }
 };
 
@@ -267,12 +265,12 @@ education.display_school = function() {
         for (var school in education.onlineCourse) {
             $("#education").append(HTMLschoolStart);
             var formattedName = HTMLonlineTitle.replace("%data%", education.onlineCourse[school].title);
+            formattedName = formattedName.replace("%url%", education.onlineCourse[school].url);
             var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourse[school].school);
             $(".education-entry:last").append(formattedName + formattedSchool);
             var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourse[school].dates);
             $(".education-entry:last").append(formattedDates);
-            var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourse[school].url);
-            $(".education-entry:last").append(formattedURL);
+
     }
 };
 
