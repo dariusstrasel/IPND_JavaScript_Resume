@@ -11,8 +11,7 @@ Cameron Pittman, Udacity Course Developer
 
 <!--
 The <head> of a website generally links to important resources the page will
-need to load. You'll see a lot of <link>s to CSS files for styles and
-<scripts> for JavaScript files to build interactions.
+need to load. You'll see a lot of <link>s to Cutions.
 -->
 <html>
 <head>
@@ -20,10 +19,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta charset="utf-8">
 
   <!-- Tells the browser what the title of this page should be. -->
-  <title>Resume</title>
+  <title>Darius Strasel's Resume</title>
 
   <!-- Load the page styles. -->
+  <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+
 
 
 
@@ -31,11 +32,32 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
   -->
 <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAaFp5rATpruyKtDIkd878pYKWsvlDjQ24"></script>
-
-
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
-<body>
+<body data-spy="scroll" data-target="#myNavbar">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Darius Strasel</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav" role="tablist">
+        <li class="active"><a href="#header">About Me</a></li>
+        <li><a href="#workExperience">Career Progress</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.linkedin.com/in/dariusstrasel"><span class="glyphicon-envelope"></span> Let's Connect!</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
   <div id="main">
 
     <!--
@@ -51,9 +73,16 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div id="workExperience" class="gray">
       <h2>Work Experience</h2>
     </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
+
+      <div class="container">
+        <div id="projects" class = "row">
+          <div class="col-sm-4">.col-sm-4</div>
+          <div class="col-sm-4">.col-sm-4</div>
+          <div class="col-sm-4">.col-sm-4</div>
+          <h2>Projects</h2>
+        </div>
+      </div>
+
     <div id="education" class="gray">
       <h2>Education</h2>
     </div>
@@ -91,7 +120,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
-
+  <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
@@ -126,7 +155,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.backgroundColor = "black";
     }
-    if(document.getElementsByTagName('h1').length === 0) {
+    if(document.getElementsByTagName('li').length === 0) {
       document.getElementById('header').style.backgroundColor = "black";
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
