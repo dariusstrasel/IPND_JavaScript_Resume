@@ -14,12 +14,12 @@ var work = {
             "location": "Coventry, RI",
             "dates": "July 2015 –Present",
             "description":
-                "—	Collaborated with Data Operations team thru agile project management techniques via daily stand-ups, weekly huddles, and sprint retrospectives organized via Salesforce.com and Atlassian JIRA software." +
-                "—	Increased reporting accuracy and data health by conducting peer code/report reviews for all SQL, SSRS, and Excel sourced projects" +
-                "—	Reduced analytics turn-around by implementing automated Excel, Powerpoint, and Access reports thru the use of VBA and SQL stored procedures through our on premise data-warehouse." +
-                "—	Lead and supported technology infrastructure solution projects in coordination with development, operations, and vendors such as Atrion, Ricoh, Carousel, InContact, WCS, and Cerner" +
-                "—	Managed and reconciled client data contact data sets into Salesforce CRM database and SQL Server" +
-                "—	Administrated user accounts and access policies for Salesforce.com, Google Apps Admin, Windows Active Directory, and Amazon Web Services"
+                "<br>—	Collaborated with Data Operations team thru agile project management techniques via daily stand-ups, weekly huddles, and sprint retrospectives organized via Salesforce.com and Atlassian JIRA software." +
+                "<br>—	Increased reporting accuracy and data health by conducting peer code/report reviews for all SQL, SSRS, and Excel sourced projects" +
+                "<br>—	Reduced analytics turn-around by implementing automated Excel, Powerpoint, and Access reports thru the use of VBA and SQL stored procedures through our on premise data-warehouse." +
+                "<br>—	Lead and supported technology infrastructure solution projects in coordination with development, operations, and vendors such as Atrion, Ricoh, Carousel, InContact, WCS, and Cerner" +
+                "<br>—	Managed and reconciled client data contact data sets into Salesforce CRM database and SQL Server" +
+                "<br>—	Administrated user accounts and access policies for Salesforce.com, Google Apps Admin, Windows Active Directory, and Amazon Web Services"
         },
         {
             "employer": "Darius’ Depictions (Self)",
@@ -27,9 +27,9 @@ var work = {
             "location": "Providence, RI",
             "dates": "January 2014 – Present",
             "description":
-                "—	Managed startup business functions including; finance, social media, client relations and project management" +
-                "—	Photographed/post-processed portraits, events and fine art products via Adobe Creative Suite for clients" +
-                "—	Designed graphic concepts and ad media for hybrid website and social media marketing"
+                "<br>—	Managed startup business functions including; finance, social media, client relations and project management" +
+                "<br>—	Photographed/post-processed portraits, events and fine art products via Adobe Creative Suite for clients" +
+                "<br>—	Designed graphic concepts and ad media for hybrid website and social media marketing"
         },
         {
             "employer": "Providence Equity Partners",
@@ -37,9 +37,9 @@ var work = {
             "location": "Providence, RI",
             "dates": "January 2015 – July 2015",
             "description":
-                "—	Analyzed and designed hardware/software usage data of company-wide computers via SCCM for IT system administration reporting allowing insightful and strategic decisions" +
-                "—	Resolved/troubleshooted a combination of over 30 Windows 7 desktop/laptop computers, LAN/WAN settings, printers/copiers, iOS phones/tablets, monitors, speakers and peripherals related issues via ticketing system resulting in proper incident management and excellent customer service" +
-                "—	Configured technical buildouts of Windows 7 desktop/laptops including software QA and hardware upgrades such as RAM, GPU, SSD according to exact design specification and follow-up"
+                "<br>—	Analyzed and designed hardware/software usage data of company-wide computers via SCCM for IT system administration reporting allowing insightful and strategic decisions" +
+                "<br>—	Resolved/troubleshooted a combination of over 30 Windows 7 desktop/laptop computers, LAN/WAN settings, printers/copiers, iOS phones/tablets, monitors, speakers and peripherals related issues via ticketing system resulting in proper incident management and excellent customer service" +
+                "<br>—	Configured technical buildouts of Windows 7 desktop/laptops including software QA and hardware upgrades such as RAM, GPU, SSD according to exact design specification and follow-up"
         }
     ]
 };
