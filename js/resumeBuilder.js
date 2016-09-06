@@ -262,14 +262,15 @@ education.display_school = function() {
         $(".education-entry:last").append(formattedMajor);
     }
         $("#education").append(HTMLonlineClasses);
-        for (var school in education.onlineCourse) {
+        for (var onlineSchool = 0; onlineSchool < education.onlineCourse.length; onlineSchool++) {
+        //for (school in education.onlineCourse) {
             $("#education").append(HTMLschoolStart);
-            var formattedName = HTMLonlineTitle.replace("%data%", education.onlineCourse[school].title);
-            formattedName = formattedName.replace("%url%", education.onlineCourse[school].url);
-            var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourse[school].school);
-            $(".education-entry:last").append(formattedName + formattedSchool);
-            var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourse[school].dates);
-            $(".education-entry:last").append(formattedDates);
+            var formattedSchoolName = HTMLonlineTitle.replace("%data%", education.onlineCourse[onlineSchool].title);
+            formattedSchoolName = formattedSchoolName.replace("%url%", education.onlineCourse[onlineSchool].url);
+            var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourse[onlineSchool].school);
+            $(".education-entry:last").append(formattedSchoolName + formattedSchool);
+            var formattedSchoolDates = HTMLonlineDates.replace("%data%", education.onlineCourse[onlineSchool].dates);
+            $(".education-entry:last").append(formattedSchoolDates);
 
     }
 };
@@ -285,7 +286,7 @@ function startClickLogging() {
     $(document).click(function(loc) {
     console.log(loc.pageX, loc.pageY);
 });
-};
+}
 
 function appendGoogleMap() {
     $('#mapDiv').append(googleMap);
@@ -300,4 +301,4 @@ bio.display_skills();
 education.display_school();
 bio.display_footer_contact();
 startClickLogging();
-appendGoogleMap()
+appendGoogleMap();

@@ -36,10 +36,10 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href=%url%>%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<br><p>%data%</p>';
+var HTMLprojectStart = '<div class="thumbnail"><div class="project-entry col-sm-3"></div></div>';
+var HTMLprojectTitle = '<div class="caption"><a href=%url%>%data%</a></div>';
+var HTMLprojectDates = '<div class="caption"><div class="date-text">%data%</div></div>';
+var HTMLprojectDescription = '<div class="caption"><br><p>%data%</p></div>';
 var HTMLprojectImage = '<img class = "thumbnail" src="%data%">';
 var HTMLprojectURL = '<a href =%data% class = "btn btn-default" role = "button">Github</a>';
 
