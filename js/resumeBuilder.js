@@ -114,11 +114,13 @@ var education = {
         "name": "Year Up / Community College of Rhode Island",
         "location": "Providence, RI",
         "degree": "A.A.S.",
-        "majors": "Computer Science",
+        "majors": [
+            "Computer Science"
+        ],
         "dates": "September 2014 – Present",
         "url": "http://www.yearup.org/"
     }],
-    "onlineCourse": [{
+    "onlineCourses": [{
         "title": "Introduction to Programming",
         "school": "Udacity",
         "dates": "July 2016 – September 2016",
@@ -144,53 +146,37 @@ bio.display_skills = function() {
     }
 };
 
-bio.display_name = function() {
-    //This method will append my namne and role to the #header div of my resume.
+bio.display = function() {
+    //This method will loop through the bio.contacts object to append my contact information.
+    //method hasOwnProperty(index) is called on bio.contacts to parse the key value pairs of the
+    //object
+    //This method will append my profile picture and welcome message to the #header div.
+    var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
+    var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+    $("#header").append(formattedPic);
+    $("#header").append(formattedMessage);
+    for (var index in bio.contacts) {
+        if (!bio.contacts.hasOwnProperty(index)) {
+            continue;
+        }
+        var formattedContact = HTMLcontactGeneric.replace("%contact%", [index]);
+        formattedContact = formattedContact.replace("%data%", bio.contacts[index]);
+        $("#topContacts, #footerContacts").append(formattedContact);
+    }
+        //This method will append my name and role to the #header div of my resume.
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     $("#navbar-header").prepend(formattedName);
     $("#header").append(formattedRole);
 };
 
-bio.display_top_contact = function() {
-    //This method will loop through the bio.contacts object to append my contact information.
-    //method hasOwnProperty(index) is called on bio.contacts to parse the key value pairs of the
-    //object
-    for (var index in bio.contacts) {
-        if (!bio.contacts.hasOwnProperty(index)) {
-            continue;
-        }
-        //console.log("153: " + bio.contacts[index]);
-        var formattedContact = HTMLcontactGeneric.replace("%contact%", [index]);
-        //console.log("155: " + formattedContact);
-        formattedContact = formattedContact.replace("%data%", bio.contacts[index]);
-        //console.log("157: " + formattedContact);
-        $("#topContacts").append(formattedContact);
-    }
-};
-
-bio.display_pictureMessage = function() {
+/*bio.display_pictureMessage = function() {
     //This method will append my profile picture and welcome message to the #header div.
     var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
     var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(formattedPic);
     $("#header").append(formattedMessage);
-};
-
-bio.display_footer_contact = function() {
-    //This method will loop through the bio.contacts object to append my contact information.
-    //method hasOwnProperty(index) is called on bio.contacts to parse the key value pairs of the
-    //object. This is very similar to bio.display_top_contact, but appends to #footerContacts div.
-    for (var index in bio.contacts) {
-        if (!bio.contacts.hasOwnProperty(index)) {
-            continue;
-        }
-        console.log("171: " + bio.contacts[index]);
-        var formattedContact = HTMLcontactGeneric.replace("%contact%", [index]);
-        formattedContact = formattedContact.replace("%data%", bio.contacts[index]);
-        $("#footerContacts").append(formattedContact);
-    }
-};
+};*/
 
 projects.display = function() {
     //This method will loop through the projects object to append any programming projects I've
@@ -225,7 +211,7 @@ work.display = function() {
     }
 };
 
-education.display_school = function() {
+education.display = function() {
     //This method will append the contents of the education.schools objects, invoking
     // $("#education").append(HTMLschoolStart) for online schools as well. (Held in same object;
     //different property.)
@@ -242,14 +228,14 @@ education.display_school = function() {
         $(".education-entry:last").append(formattedMajor);
     }
     $("#education").append(HTMLonlineClasses);
-    for (var onlineSchool = 0; onlineSchool < education.onlineCourse.length; onlineSchool++) {
+    for (var onlineSchool = 0; onlineSchool < education.onlineCourses.length; onlineSchool++) {
         //for (school in education.onlineCourse) {
         $("#education").append(HTMLschoolStart);
-        var formattedSchoolName = HTMLonlineTitle.replace("%data%", education.onlineCourse[onlineSchool].title);
-        formattedSchoolName = formattedSchoolName.replace("%url%", education.onlineCourse[onlineSchool].url);
-        var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourse[onlineSchool].school);
+        var formattedSchoolName = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineSchool].title);
+        formattedSchoolName = formattedSchoolName.replace("%url%", education.onlineCourses[onlineSchool].url);
+        var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineSchool].school);
         $(".education-entry:last").append(formattedSchoolName + formattedSchool);
-        var formattedSchoolDates = HTMLonlineDates.replace("%data%", education.onlineCourse[onlineSchool].dates);
+        var formattedSchoolDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineSchool].dates);
         $(".education-entry:last").append(formattedSchoolDates);
 
     }
@@ -272,13 +258,10 @@ function appendGoogleMap() {
     $('#mapDiv').append(googleMap);
 }
 
-bio.display_name();
-bio.display_top_contact();
-bio.display_pictureMessage();
+bio.display();
 work.display();
 projects.display();
 bio.display_skills();
-education.display_school();
-bio.display_footer_contact();
+education.display();
 startClickLogging();
 appendGoogleMap();
