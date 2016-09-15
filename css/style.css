@@ -1,3 +1,28 @@
+* {
+  font-family: "myriad-pro";
+}
+
+h1, h2, h3, h4 {
+    font-family: "garamond-premier-pro-display";
+}
+
+body, html {
+    height: 100%;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("city.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 /*
 body,
 div,
@@ -227,6 +252,8 @@ span {
     display: none;
   }
 }
+
+
 
 #map {
   display: block;

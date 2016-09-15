@@ -258,6 +258,13 @@ function appendGoogleMap() {
     $('#mapDiv').append(googleMap);
 }
 
+function appendBackgroundImages() {
+    //Basically, I want you to find all background divs and add the "parallax" class and image url, by input
+    //TODO: Create a JSON object to hold the background URLS.
+    //TODO: Add logic in this function to append the background URLs into the parallax divs.
+    //
+}
+
 bio.display();
 work.display();
 projects.display();

@@ -15,6 +15,8 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1><a id="name" class="orange navbar-brand" href="#">%data%</a></h1>';
 var HTMLheaderRole = '<span id="name"></span><hr>';
 
+var HTMLparallaxbg = '<div class="parallax" style="background-image: url("%data%"></div>';
+
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
 var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
