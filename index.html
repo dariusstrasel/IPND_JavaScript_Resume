@@ -1,48 +1,38 @@
 <!DOCTYPE html>
-
-<!--
-This is an HTML document. It contains information about how elements in the website
-are arranged. In other words, it describes the layout of a website.
-
-I can't wait to see the resumes you put together!
-
-Cameron Pittman, Udacity Course Developer
--->
-
-<!--
-The <head> of a website generally links to important resources the page will
-need to load. You'll see a lot of <link>s to Cutions.
--->
 <html>
 <head>
-  <!-- This tells the browser how to read the document. -->
   <meta charset="utf-8">
-
-  <!-- Tells the browser what the title of this page should be. -->
   <title>Darius Strasel's Resume</title>
 
-  <!-- Load the page styles. -->
-  <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+<!-- Adobe Typekit Loading... Myriad Pro and Garamond Pro. Maybe add Proxima as well?-->
+<script src="https://use.typekit.net/gzz8xht.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <!-- Bootstrap JavaScript-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Bootstrap CSS-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="css/style.css" rel="stylesheet">
 
-
-
-
-  <!--
-  Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
-  -->
+<!-- Google Map Import-->
 <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAaFp5rATpruyKtDIkd878pYKWsvlDjQ24"></script>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
+
+<!-- Bootstrap NavBar-->
 <body data-spy="scroll" data-target="#myNavbar">
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
+        <!-- Collapsed NavBar Graphics-->
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+        <!-- Link on NavBar to far-left-->
       <a class="navbar-brand" href="#">Darius Strasel</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -60,12 +50,38 @@ need to load. You'll see a lot of <link>s to Cutions.
 </nav>
   <div id="main">
 
-    <!--
-    Everything from here to the <script> tag below is the skeleton of your
-    website. Your code will add information to each of the sections of the
-    resume below. You can pretty easily figure out what each section will
-    display by looking at the id or at what's written between the <h2> tags.
-    -->
+<!-- Main Page Content-->
+
+<!-- -->
+
+<div id="header" class="container">
+    <h1>Example</h1>
+    <p>This is a demonstration of how to use full-width background while keeping the regular .container grid.</p>
+    <ul id="topContacts" class="flex-box"></ul>
+</div>
+<div class="specialBackground" style="background-color: gold;">
+    <div id="workExperience" class="container">
+        <h2>Work Experience</h2>
+    </div>
+</div>
+<div class="container">
+    <h2>Projects</h2>
+    <div class="row" id="projects"></div>
+</div>
+<div id="education" class="container">
+    <h2>Education</h2>
+</div>
+<div id="mapDiv" class="container">
+  <h2>Where I've Lived and Worked</h2>
+</div>
+<div id="lets-connect" class="container">
+  <ul id="footerContacts">
+      </ul>
+</div>
+
+<!-- -->
+
+<!-- This is the old HTML structure. Also contains custom CSS class references.
     <div id="header" class="center-content clear-fix">
       <ul id="topContacts" class="flex-box"></ul>
     </div>
@@ -91,6 +107,8 @@ need to load. You'll see a lot of <link>s to Cutions.
       </ul>
     </div>
   </div>
+-->
+
 
   <!-- "HTML is loaded by the browser in the order it appears in the file. If the JavaScript is loaded first and it is supposed to affect the HTML below it, it might not work, as the JavaScript would be loaded before the HTML it is supposed to work on. Therefore, putting JavaScript near the bottom of the HTML page is often the best strategy."
   https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics -->
