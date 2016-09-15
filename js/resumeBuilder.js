@@ -1,3 +1,12 @@
+var backgrounds = {
+    "url": [
+        "images/downtown.jpg",
+        "images/trafficlights.jpg",
+        "images/downtown2.jpg",
+        "images/leaves.jpg",
+    ]
+};
+
 var work = {
     //This JSON object contains all records of my current/previous positions.
     "jobs": [{
@@ -133,6 +142,22 @@ var education = {
     }]
 };
 
+backgrounds.display = function() {
+    //This method will append the contents of the work object to the #workExperience div
+    for (var image = 0; image < backgrounds.url.length; image++) {
+        //for (var job in work.jobs) {
+        $("#workExperience").append(HTMLworkStart);
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+        var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+        $(".work-entry:last").append(formattedEmployer + formattedTitle);
+        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+        $(".work-entry:last").append(formattedDates + formattedLocation);
+        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        $(".work-entry:last").append(formattedDescription);
+    }
+};
+
 bio.display_skills = function() {
     //This method will append the contents of the bio.skills array to the #header div.
     if (bio.skills.length > 0) {
@@ -262,7 +287,7 @@ function appendBackgroundImages() {
     //Basically, I want you to find all background divs and add the "parallax" class and image url, by input
     //TODO: Create a JSON object to hold the background URLS.
     //TODO: Add logic in this function to append the background URLs into the parallax divs.
-    //
+    //------------------------------------------------------------------------------------------------------------------
 }
 
 bio.display();
