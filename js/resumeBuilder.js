@@ -1,10 +1,12 @@
 var backgrounds = {
-    "url": [
+    "urls": [
         "images/downtown.jpg",
         "images/trafficlights.jpg",
         "images/downtown2.jpg",
         "images/leaves.jpg",
-    ]
+    ],
+    "urlIndex": 0,
+    "usedURLs": []
 };
 
 var work = {
@@ -144,18 +146,42 @@ var education = {
 
 backgrounds.findDIV = function () {
     $('.backgroundImg').each(function(i, obj) {
-    console.log(i);
-    console.log(obj);
+    console.log("index: " + i);
+    console.log("object: " + obj);
+    var newURL = backgrounds.selectUnusedURL()
+    var formattedBackgroundImage = HTMLparallaxBackground.replace("%data%", newURL);
+    console.log(formattedBackgroundImage);
+    $(".backgroundImg").append(formattedBackgroundImage);
 });
 }
+
+backgrounds.selectUnusedURL = function () {
+        for (var image = 0; image < backgrounds.urls.length; image++) {
+            console.log("Line 159");
+            console.log("image: " + image);
+            console.log("...processing: " + backgrounds.urls[backgrounds.urlIndex]);
+            if (backgrounds.usedURLs.includes(backgrounds.urls[backgrounds.urlIndex]) === false) {
+                console.log("Line 161");
+                backgrounds.usedURLs.push(backgrounds.urls[backgrounds.urlIndex]);
+                return backgrounds.urls[backgrounds.urlIndex];
+            } else if (backgrounds.usedURLs.includes(backgrounds.urls[backgrounds.urlIndex]) === true) {
+            backgrounds.urlIndex = backgrounds.urlIndex + 1;
+            //console.log("backgrounds.urlIndex: " + backgrounds.urlIndex);
+            console.log("Line 165");
+            }
+            if (backgrounds.urls[backgrounds.urlIndex] === undefined){
+                return "images/city.jpg"
+            }
+        }
+};
 
 backgrounds.display = function() {
     //TODO: Add function which pulls a URL if it isn't already used. Think "if in usedIMG[]"
     //This method will append the contents of the work object to the #workExperience div
-    for (var image = 0; image < backgrounds.url.length; image++) {
+    for (var image = 0; image < backgrounds.urls.length; image++) {
         //for (var job in work.jobs) {
-        console.log(backgrounds.url[image])
-        var formattedBackgroundImage = HTMLparallaxBackground.replace("%data%", backgrounds.url[image]);
+        console.log(backgrounds.urls[image])
+        var formattedBackgroundImage = HTMLparallaxBackground.replace("%data%", backgrounds.urls[image]);
         console.log(formattedBackgroundImage);
         $(".backgroundImg").append(formattedBackgroundImage);
     }
