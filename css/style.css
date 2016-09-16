@@ -13,9 +13,9 @@ body, html {
     height: 100%;
 }
 
-.parallax {
+.backgroundImg {
     /* The image used */
-    background-image: url("city.jpg");
+    /* background-image: url("city.jpg"); */
 
     /* Set a specific height */
     height: 500px;
